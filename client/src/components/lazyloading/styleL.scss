@@ -1,0 +1,121 @@
+$charade: #282a37;
+$bluebell: #979fd0;
+
+.content-L {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.load_P {
+  color: rgb(116, 76, 25);
+  font-size: 80px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+
+ .imgL {
+   
+    width: 100px;
+    height: 100px;
+    margin: 2rem 0.3rem;
+    background: $bluebell;
+    border-radius: 50%;
+    animation: 0.9s bounce infinite alternate;
+
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+  }
+}
+
+
+
+.loading2 {
+  display: flex;
+  justify-content: center;
+
+ .imgP {
+    animation: 0.9s bounce infinite alternate;
+
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+  }
+
+  .pFount {
+    font-size: 30px;
+  }
+}
+
+
+
+@keyframes bounce {
+  to {
+    opacity: 0.3;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fancy-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+
+  div {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    &.ring {
+      border-width: 0.5rem;
+      border-style: solid;
+      border-color: transparent;
+      animation: 2s fancy infinite alternate;
+      
+      &:nth-child(1) {
+        border-left-color: $bluebell;
+        border-right-color: $bluebell;
+      }
+      &:nth-child(2) {
+        border-top-color: $bluebell;
+        border-bottom-color: $bluebell;
+        animation-delay: 1s;
+      }
+    }
+
+    &.dot {
+      width: 1rem;
+      height: 1rem;
+      background: $bluebell;
+    }
+  }
+}
+
+@keyframes fancy {
+  to {
+    transform: rotate(360deg) scale(0.5);
+  }
+}
